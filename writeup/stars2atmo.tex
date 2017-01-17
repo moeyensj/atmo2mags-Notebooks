@@ -106,11 +106,11 @@ The difference in magnitudes between two observations of a {\it temporally const
 with different $\phi_b(\lambda)$ is given by 
 \begin{equation}
 \label{eqn:Delta_m}
-\Delta m_b^{obs}  \equiv m_b^{nat} - m_b^{std}  =  -2.5 \, log_{10} \,  \left( { \int_0^\infty {F_\nu(\lambda) \,
+\Delta m_b^{obs}  \equiv m_b^{obs} - m_b^{std}  =  -2.5 \, log_{10} \,  \left( { \int_0^\infty {F_\nu(\lambda) \,
     \phi_b^{obs}(\lambda) \, d\lambda} \over \int_0^\infty {F_\nu(\lambda) \,
     \phi_b^{std}(\lambda) \, d\lambda}} \right)
 \end{equation}
-where $\phi_b^{std}(\lambda)$ corresponds to a ``standard'' bandpass, and $m_b^{nat}$ are
+where $\phi_b^{std}(\lambda)$ corresponds to a ``standard'' bandpass, and $m_b^{obs}$ are
 known as ``natural'' magnitudes. Note that $\Delta m_b^{obs}$ depends on the {\it shape} of the 
 source spectrum, $F_\nu(\lambda)$ and the {\it shape} of the bandpass
 $\phi_b^{obs}(\lambda)$; for a source with flat (constant with respect to wavelength) SED (spectral
@@ -118,7 +118,7 @@ energy distribution), $\Delta m_b^{obs}=0$ because the integral of $\phi_b(\lamb
 by definition. 
 
 Assuming that $\Delta m_b^{obs} \ll 1$, and an unknown $\Delta m_{gray}$ (implying that reported
-$m_b^{nat}$ have this bias, either due to clouds or due to zeropoint errors), 
+$m_b^{obs}$ have this bias, either due to clouds or due to zeropoint errors), 
 \begin{equation}
   \Delta m_b^{obs}   \approx \Delta m_{gray} - \int_0^\infty { \Delta\phi_b^{obs}(\lambda) \,  {F_\nu(\lambda) \over F_b^{std}} \, d\lambda},
 \end{equation}
@@ -256,3 +256,27 @@ have to be before we lose ability to meaningfully constrain atmospheric paramete
 What is the root-mean-square scatter? Plot residuals vs. color. 
 
 \end{document}
+
+
+
+
+
+% some useful info harvested from Joachim's emails
+
+% the color coding of symbols in plots 
+Kurucz MS: metallicity 
+Galaxies: redshift bins between 0.0 and 3.0 
+Supernovae: redshift bins between 0.0 and 1.2
+Quasars: redshift bins between 0.0 and 7.5
+MLT dwarfs: no color scheme
+White dwarfs: no color scheme
+
+
+for delta-delta plots (right column): 
+Kurucz MS - Dots: Cyan (-5 <= M < -3), Blue (-3 <= M < -2) , Green (-2 <= M < -1),
+       Yellow (-1 <= M < 0), Red (0 <= M < 1), Purple ( 1 <= M) where M is metallicity
+MLT Dwarfs - Crosses: Blue always
+White Dwarfs - Crosses: Yellow always
+Galaxies - Dots: Blue (0.0 <=z < 1.0), Green (1.0 <= z < 2.0), Red (2.0 <= z < 3.0), Purple ( 3.0 <= z)
+Quasars - Circles: Blue (0.0 <= z < 1.0), Green (1.0 <= z < 2.0), Red (2.0 <= z < 3.0), Purple ( 3.0 <= z <= 7.5)***
+Supernova - Squares: Blue (0.0 <= z < 0.4), Green (0.4 <= z < 0.8), Red (0.8 <= z <= 1.2)
